@@ -1,0 +1,163 @@
+.get-in-touch {
+  background-color: $black;
+  background: url('../img/get_in_touch_bg.jpg') no-repeat; 
+  background-size: cover;
+  display: grid;
+  grid-gap: 30px 30px;
+  grid-template-columns: 1fr;
+  padding-top: 25px;
+  
+  @include mediaQueriesMin(768px) {
+    padding: 25px 5px 0;
+  }
+  
+  .sections-title {
+    color: $lightGray;
+    grid-column: 1 / -1;
+    text-align: center;
+    
+    @include mediaQueriesMin(480px) {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+    }
+  }
+  
+  .sub-title {
+    color: #fff;
+    font-family: $textFont;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+    @include mediaQueriesMin(480px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .text {
+    color: #fff;
+    display: block;
+    font-family: $textFont;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    
+    @include mediaQueriesMin(480px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+  
+  .red-triangle {
+    background-color: $red;
+    bottom: -130px;
+    display: none;
+    height: 250px;
+    position: absolute;
+    right: 10px;
+    transform: rotate(45deg);
+    width: 250px;
+  }
+}
+
+.get-in-touch-grid-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px 30px;
+  margin: 0 auto;
+  
+  @include mediaQueriesMin(480px) {
+    grid-gap: 20px 30px;
+  }
+  
+  @include mediaQueriesMin(768px) {
+    grid-template-columns: repeat(6, auto);
+    width: 100%;
+  }
+}
+
+.email-icon {
+  height: 31px;
+  justify-self: end;
+  width: 40px;
+  
+  @include mediaQueriesMin(480px) {
+    height: 39px;
+    width: 50px;
+  }
+  
+  @include mediaQueriesMin(768px) {
+    grid-column: 1;
+  }
+}
+
+.description-email-wrapper {
+  @include mediaQueriesMin(768px) {
+    grid-column: 2 / 3;
+  }
+}
+
+.phone-icon {
+  height: 44px;
+  justify-self: end;
+  width: 30px;
+  
+  @include mediaQueriesMin(480px) {
+    height: 50px;
+    justify-self: center;
+    width: 34px;
+  }
+  
+  @include mediaQueriesMin(768px) {
+    justify-self: end;
+  }
+}
+
+.description-phone-wrapper {
+  @include mediaQueriesMin(768px) {
+    grid-column: 4 / 5;
+  }
+}
+
+.office-icon {
+  height: 41px;
+  justify-self: end; 
+  width: 40px;
+  
+  @include mediaQueriesMin(480px) {
+    height: 51px;
+    width: 50px;
+  }
+}
+
+.social-media {
+  border-bottom: 2px solid $veryLightGray;
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  padding: 0 10px 30px; 
+  
+  .fa {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  @include mediaQueriesMin(480px) {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+footer {
+  color: #fff;
+  font-family: $textFont;
+  font-size: 1.4rem;
+  grid-column: 1 / -1;
+  padding: 0 30px;
+  text-align: center;
+  
+  @include mediaQueriesMin(480px) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,54 @@
+@mixin headerIcons {
+  color: #fff;
+  font-size: 2.1rem;
+  margin-right: 25px;
+}
+
+@mixin headerTitle {
+  font-family: $headerTitleFont;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin headerSubtitle {
+  display: block;
+  font-family: $headerTitleFont;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@mixin buttons {
+  border: none;
+  border-radius: 30px;
+  box-shadow: -3px 11px 40px rgba(0, 0, 0, .2);
+  font-family: $headerFont;
+  font-size: 2.1rem;
+  font-weight: 700;
+  height: 54px;
+  text-transform: uppercase;
+  width: 192px;
+}
+
+@mixin pictures {
+  position: absolute;
+  transform: skew(25.5deg, 0);
+  z-index: -1;
+}
+
+@mixin picturesTitles {
+  color: #fff;
+  font-family: $headerFont;
+  text-transform: uppercase;
+}
+
+@mixin arrows {
+  padding: 0;
+  height: 0;
+}
+
+@mixin mediaQueriesMin($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

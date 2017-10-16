@@ -1,0 +1,202 @@
+.how-we-works {
+  background-color: $red;
+  padding: 30px 10px 20px; 
+  position: relative;
+  
+  @include mediaQueriesMin(768px) {
+    padding: 30px 10px;
+  }
+  
+  .sections-title {
+    color: #fff;
+    
+    @include mediaQueriesMin(480px) {
+      font-size: 5.5rem;
+      line-height: 4.7rem;
+    }
+  }
+  
+  .description {
+    color: #fff;
+    grid-column: 1 / -1;
+    margin-bottom: 50px;
+    text-align: center;
+    
+    @include mediaQueriesMin(480px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      width: 95%;
+    }
+    
+    @include mediaQueriesMin(768px) {
+      max-width: 740px;
+    }
+  }
+  
+  .btn-read-more {
+    @include buttons;
+    background-color: $black;
+    bottom: -27px;
+    color: white;
+    left: 50%;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: $lightBlack;
+      box-shadow: none;
+      cursor: pointer;
+    }
+    
+    @include mediaQueriesMin(768px) {
+      grid-column: 1 / -1;
+      margin: 0 auto;
+      position: static;  
+      transform: translateX(0);
+    }
+  }
+}
+
+.how-we-works-container {
+  display: grid;
+  grid-column-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  margin-top: 30px;
+  
+  @include mediaQueriesMin(480px) {
+    margin-top: 20px;
+  }
+}
+
+.how-we-works-picture1,
+.how-we-works-picture2,
+.how-we-works-picture3 {
+  box-shadow: -3px 11px 40px rgba(0, 0, 0, .2);
+  height: 195px;
+  margin: 0 0 40px 0;
+  overflow: hidden;
+  position: relative;
+  transform: skew(-25.5deg, 0);
+  transform-origin: bottom left;
+  width: 210px;
+}
+
+.how-we-works-picture1 {
+  background-color: #424240;
+  margin-right: 90px;
+  
+  .description {
+    color: #fff;
+    left: 45px;
+    margin: 0;
+    bottom: 10%;
+    text-align: left;
+    width: 70%;
+  }
+}
+
+.how-we-works-picture2 {
+  margin-left: 90px;
+  transform: skew(25.5deg, 0);
+  
+  .pic2 {
+    transform: skew(-25.5deg, 0);
+  }
+  
+  .how-we-works-picture-number {
+    left: 20px;
+  }
+  
+  .how-we-works-picture-number {
+    transform: skew(-25.5deg, 0);
+  }
+  
+  figcaption {
+    transform: skew(-25.5deg, 0);
+    
+    .how-we-works-picture-title-bottom {
+      margin-right: 30px;
+      text-align: right;
+    }
+  }
+}
+
+.how-we-works-picture3 {
+  grid-column: 1 / -1;
+  margin-left: -90px;
+}
+
+.how-we-works-picture2,
+.how-we-works-picture3 {
+  background-color: #000;
+  
+  figcaption {
+    bottom: 10px;
+    left: 15px;
+  }
+}
+
+.pic1, .pic2, .pic3 {
+  @include pictures;
+}
+
+.pic1 {
+  left: -105px;
+  opacity: .3;
+  top: -20px;
+  width: 450px;
+}
+
+.pic2 {
+  left: -72px;
+  opacity: .6;
+  top: -20px;
+  width: 450px;
+}
+
+.pic3 {
+  left: -128px;
+  opacity: .6;
+  top: -5px;
+  width: 450px;
+}
+
+.how-we-works-picture-number {
+  color: #fff;
+  font-family: $headerFont;
+  font-size: 4rem;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  transform: skew(25.5deg, 0);
+}
+
+.how-we-works-picture1 {
+  position: relative;
+}
+
+.how-we-works-picture-title-middle,
+.how-we-works-picture-title-bottom {
+  @include picturesTitles;
+  font-size: 3rem;
+}
+
+.how-we-works-picture-title-middle {
+  margin-bottom: 10px;
+}
+
+.how-we-works-triangle {
+  background-color: $red;
+  display: none;
+  height: 840px;
+  position: absolute;
+  right: -420px;
+  top: -268px;
+  transform: rotate(45deg);
+  width: 840px;
+  z-index: -1;
+}

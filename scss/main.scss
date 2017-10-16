@@ -1,0 +1,55 @@
+@import "_variables";
+@import "_mixins";
+
+@font-face {
+  font-family: $headerTitleFont;
+  src: url('../fonts/LemonMilkbold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: $who-we-areTitleFont;
+  src: url('../fonts/peace_sans.otf') format("opentype");
+  font-family: $cite;
+  src: url('../fonts/PumpDemiBoldLetPlain.otf') format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+  margin: 0;
+}
+
+.container {
+  font-family: $textFont;
+  overflow: hidden;
+}
+
+.sections-title {
+  font-family: $who-we-areTitleFont;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  text-align: center;	
+}
+
+.description {
+  font-family: $textFont;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+figcaption {
+  bottom: 20px;
+  left: 30px;
+  position: absolute;
+  transform: skew(25.5deg, 0);
+  width: 100%;
+}
+
+@import "_header.scss";
+@import "_who-we-are.scss";
+@import "_what-we-do.scss";
+@import "_how-we-works.scss";
+@import "_our-creative-team.scss";
+@import "_what-client-says.scss";
+@import "_get-in-touch.scss";
