@@ -855,7 +855,7 @@ span.none {
 }
 @media screen and (min-width: 1200px) {
   .what-we-do {
-    padding: 95px 100px 120px;
+    padding: 95px 11% 120px;
   }
 }
 .what-we-do .sections-title {
@@ -894,6 +894,7 @@ span.none {
     line-height: 3rem;
     margin: 0;
     text-align: left;
+    width: 100%;
   }
 }
 
