@@ -229,18 +229,6 @@ footer {
   }
 }
 
-//.get-in-touch-red-triangle {
-//  @include mediaQueriesMin(1200px) {
-//    background-color: $red;
-//    top: 450px;
-//    height: 250px;
-//    left: 83.3%;
-//    position: absolute;
-//    transform: rotate(45deg);
-//    width: 250px;
-//  }
-//}
-
 .get-in-touch-red-triangle {
   @include mediaQueriesMin(1200px) {
     border-bottom: 175px solid $red;
