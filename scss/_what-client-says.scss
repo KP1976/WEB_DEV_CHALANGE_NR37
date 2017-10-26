@@ -7,6 +7,16 @@
     background-color: transparent;
     padding: 25px 70px 70px;
   }
+  
+  @include mediaQueriesMin(992px) {
+    background-color: transparent;
+    padding: 20px 100px 120px 150px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    background-color: transparent;
+    padding: 100px 100px 170px 220px;
+  }
 }
 
 .what-client-says-red-triangle {
@@ -15,9 +25,19 @@
     height: 685px;
     left: -550px;
     position: absolute;
-    top: -35px;
+    top: -37px;
     transform: rotate(45deg);
     width: 685px;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    top: -23px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    left: -345px;
+    top: 77px;
+    z-index: 1;
   }
 }
 
@@ -32,6 +52,18 @@
     position: relative;
   }
   
+  @include mediaQueriesMin(992px) {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    max-width: 900px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    justify-items: start;
+    max-width: 1115px;
+    z-index: 1;
+  }
+  
   .sections-title {
     color: #fff;
     grid-column: 1 / -1;
@@ -44,6 +76,17 @@
     
     @include mediaQueriesMin(768px) {
       color: $lightBlack;
+    }
+    
+    @include mediaQueriesMin(992px) {
+      grid-row: 1 / 2;
+      margin-bottom: 120px;
+    }
+    
+    @include mediaQueriesMin(1200px) {
+      font-size: 6.2rem;
+      line-height: 5.4rem;
+      text-align: left;
     }
   }
 }
@@ -64,6 +107,18 @@
     margin: 100px 0 90px 0;
     width: 250px;
   }
+  
+  @include mediaQueriesMin(992px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    margin: 0;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    height: 295px;
+    margin: 0;
+    width: 295px;
+  }
 }
 
 .what-client-says-big-picture {
@@ -80,6 +135,13 @@
     left: -45px;
     top: -45px;
     width: 310px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    height: 365px;
+    left: -53px;
+    top: -53px;
+    width: 365px;
   }
 }
 
@@ -101,6 +163,17 @@
   @include mediaQueriesMin(768px) {
     color: $veryLightBlack;
   }
+  
+  @include mediaQueriesMin(992px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-left: 60px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    font-size: 20rem;
+    line-height: 16rem;
+  }
 }
 
 cite {
@@ -118,6 +191,20 @@ cite {
   
   @include mediaQueriesMin(768px) {
     color: $veryLightBlack;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    width: 100%;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 20px;
   }
 }
 
@@ -138,13 +225,32 @@ cite {
   @include mediaQueriesMin(768px) {
     color: $veryLightBlack;
   }
+  
+  @include mediaQueriesMin(992px) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin-top: 30px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
 }
 
 .what-client-says-small-pictures-container {
   align-items: center;
   display: flex;
   grid-column: 1 / -1;
+  justify-content: flex-start;
   margin: 60px 0 0 40px;
+  
+  @include mediaQueriesMin(992px) {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    margin: 45px 0 0 0;
+    width: 100%;
+  }
 }
 
 .what-client-says-small-pictures-wrapper {
@@ -160,6 +266,12 @@ cite {
     margin: 0 45px 0 0;
     width: 85px;
   }
+  
+  @include mediaQueriesMin(992px) {
+    height: 50px;
+    margin: 0 30px 0 0;
+    width: 50px;
+  }
 }
 
 .what-client-says-picture {
@@ -173,6 +285,11 @@ cite {
     left: -15px;
     top: -20px;
   }
+  
+  @include mediaQueriesMin(992px) {
+    left: -10px;
+    top: -10px;
+  }
 }
 
 .what-client-says-black-triangle {
@@ -185,6 +302,10 @@ cite {
     transform: rotate(45deg);
     width: 840px;
     z-index: -1;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    left: 90%;
   }
 }
 

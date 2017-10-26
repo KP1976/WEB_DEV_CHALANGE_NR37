@@ -2,12 +2,35 @@
   background-color: $black;
   padding: 25px 20px 35px;
   position: relative;
+
+  @include mediaQueriesMin(768px) {
+    padding: 0;
+  }
   
+  @include mediaQueriesMin(992px) {
+    background-color: transparent;
+  }
+}
+  
+.who-we-are-grid-wrapper {
   @include mediaQueriesMin(768px) {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding: 25px 20px 30px;
+  }
+
+  @include mediaQueriesMin(992px) {
+    display: grid;
+    grid-row-gap: 65px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px 30px 80px;
+    position: relative;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    grid-template-columns: 1fr 1.3fr;
+    padding: 100px 150px 100px 200px;
   }
   
   .sections-title {
@@ -16,6 +39,17 @@
     @include mediaQueriesMin(480px) {
       font-size: 5.5rem;
       line-height: 4.7rem;
+    }
+    
+    @include mediaQueriesMin(992px) {
+      color: $lightBlack;
+      grid-row: 1 / 2;
+      text-align: left;
+    }
+    
+    @include mediaQueriesMin(1200px) {
+      font-size: 6.2rem;
+      line-height: 5.4rem;
     }
   }
   
@@ -35,6 +69,16 @@
       max-width: 750px;
       width: 90%;
     }
+    
+    @include mediaQueriesMin(992px) {
+      color: $veryLightBlack;
+      font-size: 1.7rem;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      line-height: 3rem;
+      margin: 0 0 0 20px;
+      text-align: left;
+    }
   }
   
   .macbook {
@@ -49,6 +93,22 @@
     @include mediaQueriesMin(768px) {
       margin-bottom: 10px;
       max-width: 700px;
+    }
+    
+    @include mediaQueriesMin(992px) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      justify-self: center;
+      position: absolute;
+      top: 60px;
+      width: 100%;
+    }
+    
+    @include mediaQueriesMin(1200px) {
+      align-self: start;
+      grid-row: 1 / 4;
+      margin: 0;
+      position: static;
     }
   }
   
@@ -75,10 +135,18 @@
       position: static;  
       transform: translateX(0);
     }
+    
+    @include mediaQueriesMin(992px) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin: 0;
+    }
   }
-  
-  .black-triangle {
-    display: none;
+}
+
+.black-triangle {
+  @include mediaQueriesMin(992px) {
+    display: block;
     height: 0;
     border-bottom: 1005px solid transparent;
     border-left: 1005px solid transparent;
@@ -86,8 +154,13 @@
     border-top: 1005px solid $black;
     padding: 0;
     position: absolute;
-    right: -630px;
-    top: -355px;
+    right: -1000px;
+    top: -346px;
     z-index: -1;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    left: 210px;
+    right: auto;
   }
 }

@@ -7,6 +7,14 @@
     padding: 30px 0;
   }
   
+  @include mediaQueriesMin(992px) {
+    padding: 200px 0 100px 0;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    padding: 315px 0 105px 0;
+  }
+  
   .sections-title {
     color: $lightBlack;
     line-height: 4rem;
@@ -16,29 +24,43 @@
       font-size: 5.5rem;
       line-height: 5.5rem;
     }
+    
+    @include mediaQueriesMin(1200px) {
+      font-size: 6.2rem;
+      line-height: 5.4rem;
+    }
   }
 }
 
 .our-creative-team-big-triangle {
-  background-color: $black;
-  display: none;
-  height: 305px;
-  left: -152px;
-  position: absolute;
-  top: 60px;
-  transform: rotate(45deg);
-  width: 305px;
+  @include mediaQueriesMin(992px) {
+    background-color: $black;
+    height: 305px;
+    left: -152px;
+    position: absolute;
+    top: -45px;
+    transform: rotate(45deg);
+    width: 305px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    top: 55px;
+  }
 }
 
 .slider-container {
   align-items: center;
-  align-content: space-between;
   display: flex;
   flex-direction: column;
   padding: 5px 20px 0;
   
   @include mediaQueriesMin(768px) {
     flex-direction: row;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    justify-content: center;
+    padding: 5px 55px 0;
   }
 }
 
@@ -62,6 +84,14 @@
     border-top: 35px solid transparent;
     margin: 0;
   }
+  
+  @include mediaQueriesMin(1200px) {
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #424240;
+    border-top: 50px solid transparent;
+    margin-left: -50px;
+  }
 }
 
 .slider-pictures-container {
@@ -76,6 +106,11 @@
     justify-content: center;
     margin: 60px 0;
     z-index: 1;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    margin: 90px 0;
+    max-width: 1200px;
   }
 }
 
@@ -108,6 +143,11 @@
     height: 145px;
     width: 145px;
   }
+  
+  @include mediaQueriesMin(1200px) {
+    height: 245px;
+    width: 245px;
+  }
 }
 
 .big-wrapper {
@@ -122,6 +162,11 @@
   @include mediaQueriesMin(768px) {
     height: 200px;
     width: 200px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    height: 355px;
+    width: 355px;
   }
 }
 
@@ -142,6 +187,16 @@
     left: -35px;
     top: -35px;
   }
+  
+  @include mediaQueriesMin(1200px) {
+    left: -35px;
+    top: -35px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    left: -49px;
+    top: -47px;
+  }
 }
 
 .big-picture {
@@ -152,6 +207,15 @@
     left: -60px;
     top: -60px;
   }
+  
+  @include mediaQueriesMin(768px) {
+    left: -50px;
+    top: -50px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    left: -75px;
+  }
 }
 
 .slider-picture-name-box {
@@ -161,6 +225,13 @@
   margin: 0 auto;
   transform: skew(45deg);
   width: 200px;
+  
+  @include mediaQueriesMin(1200px) {
+    bottom: -25px;
+    display: block;
+    left: 20px;
+    position: absolute;
+  }
 }
 
 .slider-picture-name-box.big-box {
@@ -168,7 +239,7 @@
 }
 
 .big-box {
-  bottom: -7px;
+  bottom: -24px;
   height: 30px;
   left: 50%;
   position: absolute;
@@ -176,13 +247,21 @@
   width: 145px;
   
   @include mediaQueriesMin(480px) {
+    bottom: -39px;
     height: 45px;
     width: 230px;
   }
   
   @include mediaQueriesMin(768px) {
+    bottom: -24px;
     height: 30px;
     width: 145px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    bottom: -49px;
+    height: 45px;
+    width: 230px;
   }
 }
 
@@ -198,21 +277,26 @@
 
 .big-name {
   font-size: 1.8rem;
-  line-height: 30px;
+  line-height: 3rem;
   
   @include mediaQueriesMin(480px) {
     font-size: 2.8rem;
-    line-height: 40px;
+    line-height: 4rem;
   }
   
   @include mediaQueriesMin(768px) {
     font-size: 1.8rem;
-    line-height: 30px;
+    line-height: 3rem;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    font-size: 2.4rem;
+    line-height: 4rem;
   }
 }
 
 .slider-picture-job-box {
-  bottom: -25px;
+  bottom: -42px;
   height: 20px;
   background-color: $red;
   left: 65px;
@@ -221,17 +305,24 @@
   width: 100px;
   
   @include mediaQueriesMin(480px) {
-    bottom: -32px;
+    bottom: -65px;
     height: 30px;
     left: 100px;
     width: 150px;
   }
   
   @include mediaQueriesMin(768px) {
-    bottom: -25px;
+    bottom: -42px;
     height: 20px;
     left: 65px;
     width: 100px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    bottom: -75px;
+    height: 30px;
+    left: 125px;
+    width: 150px;
   }
 }
 
@@ -254,6 +345,11 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
   }
+  
+  @include mediaQueriesMin(1200px) {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
 }
 
 .slider-right-or-bottom-arrow {
@@ -275,5 +371,13 @@
     border-right: 35px solid transparent;
     border-top: 35px solid transparent;
     margin: 0;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #424240;
+    border-right: 50px solid transparent;
+    border-top: 50px solid transparent;
+    margin-right: -50px;
   }
 }

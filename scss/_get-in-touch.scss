@@ -3,12 +3,22 @@
   background: url('../img/get_in_touch_bg.jpg') no-repeat; 
   background-size: cover;
   display: grid;
-  grid-gap: 30px 30px;
+  grid-gap: 30px 0;
   grid-template-columns: 1fr;
+  overflow: hidden;
   padding-top: 25px;
   
   @include mediaQueriesMin(768px) {
     padding: 25px 5px 0;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    padding: 90px 0 50px 0;
+    grid-gap: 0;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    position: relative;
   }
   
   .sections-title {
@@ -19,6 +29,11 @@
     @include mediaQueriesMin(480px) {
       font-size: 5.5rem;
       line-height: 5.5rem;
+    }
+    
+    @include mediaQueriesMin(1200px) {
+      font-size: 6.2rem;
+      line-height: 5.4rem;
     }
   }
   
@@ -32,6 +47,10 @@
     @include mediaQueriesMin(480px) {
       font-size: 2rem;
     }
+    
+    @include mediaQueriesMin(992px) {
+      font-size: 2.2rem;
+    }
   }
   
   .text {
@@ -44,6 +63,11 @@
     @include mediaQueriesMin(480px) {
       font-size: 1.6rem;
       line-height: 2rem;
+    }
+    
+    @include mediaQueriesMin(992px) {
+      font-size: 1.7rem;
+      line-height: 2.4rem;
     }
   }
   
@@ -73,6 +97,14 @@
     grid-template-columns: repeat(6, auto);
     width: 100%;
   }
+  
+  @include mediaQueriesMin(992px) {
+    margin: 80px auto 110px;
+  }
+  
+  @include mediaQueriesMin(1200px) {
+    max-width: 1300px;
+  }
 }
 
 .email-icon {
@@ -87,6 +119,11 @@
   
   @include mediaQueriesMin(768px) {
     grid-column: 1;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    height: 42px;
+    width: 54px;
   }
 }
 
@@ -110,6 +147,11 @@
   @include mediaQueriesMin(768px) {
     justify-self: end;
   }
+  
+  @include mediaQueriesMin(992px) {
+    height: 53px;
+    width: 36px;
+  }
 }
 
 .description-phone-wrapper {
@@ -127,6 +169,11 @@
     height: 51px;
     width: 50px;
   }
+  
+  @include mediaQueriesMin(992px) {
+    height: 54px;
+    width: 52px;
+  }
 }
 
 .social-media {
@@ -139,11 +186,22 @@
   .fa {
     color: #fff;
     font-size: 2rem;
+    
+    @include mediaQueriesMin(992px) {
+      font-size: 2.5rem;
+    }
   }
   
   @include mediaQueriesMin(480px) {
     margin: 0 auto;
     width: 70%;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    border-bottom: none;
+    margin: 0 auto;
+    max-width: 430px;
+    padding: 0 0 40px 0;
   }
 }
 
@@ -159,5 +217,38 @@ footer {
     font-size: 1.6rem;
     line-height: 2rem;
     padding: 0 15px;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    border-top: 2px solid $veryLightGray;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    width: 675px;
+  }
+}
+
+//.get-in-touch-red-triangle {
+//  @include mediaQueriesMin(1200px) {
+//    background-color: $red;
+//    top: 450px;
+//    height: 250px;
+//    left: 83.3%;
+//    position: absolute;
+//    transform: rotate(45deg);
+//    width: 250px;
+//  }
+//}
+
+.get-in-touch-red-triangle {
+  @include mediaQueriesMin(1200px) {
+    border-bottom: 175px solid $red;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 175px solid transparent;
+    left: 80.5%;
+    position: absolute;
+    bottom: 0;
   }
 }
