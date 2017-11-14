@@ -274,6 +274,22 @@ cite {
   }
 }
 
+.bordered {
+  border: 4px solid #fff;
+  
+  @include mediaQueriesMin(480px) {
+    border: 6px solid #fff;
+  }
+  
+  @include mediaQueriesMin(768px) {
+    border: 6px solid $red;
+  }
+  
+  @include mediaQueriesMin(992px) {
+    border: 4px solid $red;
+  }
+}
+
 .what-client-says-picture {
   left: -10px;
   position: absolute;
@@ -308,4 +324,3 @@ cite {
     left: 90%;
   }
 }
-

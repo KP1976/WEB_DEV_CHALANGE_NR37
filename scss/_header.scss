@@ -154,7 +154,11 @@ header {
 }
 
 .searchOn {
-  width: 12vw;
+  width: 22vw;
+  
+  @include mediaQueriesMin(992px) {
+    width: 12vw;
+  }
 }
 
 .search-icon {
@@ -183,7 +187,11 @@ header {
 }  
 
 .hamburger-menu {
+  background-color: transparent;
+  border: none;
   margin: 10px 10px 0 0;
+  height: 27px;
+  padding: 0;
   width: 30px;
   z-index: 1;
 
@@ -456,10 +464,6 @@ span.none {
     position: static;
     transform: translateX(0);
   }
-}
-
-.model-light {
-	background-blend-mode: color-dodge;
 }
 
 .model-image {

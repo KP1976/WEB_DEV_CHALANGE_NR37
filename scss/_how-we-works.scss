@@ -14,8 +14,12 @@
   
   @include mediaQueriesMin(1200px) {
     background-color: transparent;
-    padding: 80px 0 0 65px;
+    padding: 80px 0 0 20px;
     z-index: 1;
+  }
+  
+  @include mediaQueriesMin(1600px) {
+    padding: 80px 0 0 215px;
   }
   
   .sections-title {
@@ -33,6 +37,14 @@
     @include mediaQueriesMin(1200px) {
       font-size: 6.2rem;
       line-height: 5.4rem;
+      margin-left: 195px;
+      text-align: left;
+    }
+    
+    @include mediaQueriesMin(1600px) {
+      font-size: 6.2rem;
+      line-height: 5.4rem;
+      margin-left: 0;
       text-align: left;
     }
   }
@@ -62,6 +74,16 @@
       width: 100%;
       text-align: left;
     }
+    
+    @include mediaQueriesMin(1200px) {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+    
+    @include mediaQueriesMin(1600px) {
+      grid-column: 1 / 2;
+      text-align: left;
+    }
   }
   
   .btn-read-more {
@@ -75,6 +97,7 @@
     text-align: center;
     transform: translateX(-50%);
     transition: all .3s ease-in-out;
+    z-index: 1;
 
     &:hover {
       background-color: $lightBlack;
@@ -94,9 +117,15 @@
     }
     
     @include mediaQueriesMin(1200px) {
-      grid-column: 1 / 2;
-      justify-self: start;
+      grid-column: 1 / -1;
+      justify-self: center;
       margin: 0;
+    }
+    
+    @include mediaQueriesMin(1600px) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-self: start;
     }
   }
 }
@@ -104,7 +133,7 @@
 .how-we-works-container {
   display: grid;
   grid-column-gap: 60px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   justify-items: center;
   margin-top: 30px;
   
@@ -113,7 +142,7 @@
   }
   
   @include mediaQueriesMin(992px) {
-    grid-column-gap: 20px;
+    grid-column-gap: 15px;
     grid-row-gap: 50px;
     grid-template-columns: minmax(250px, 350px) repeat(3, 210px);
     margin-top: 0;
@@ -121,9 +150,18 @@
   }
   
   @include mediaQueriesMin(1200px) {
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
-    grid-template-columns: minmax(250px, 350px) repeat(3, 315px);
+    grid-column-gap: 0;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  @include mediaQueriesMin(1600px) {
+    grid-column-gap: 15px;
+    grid-row-gap: 50px;
+    grid-template-columns: minmax(250px, 350px) repeat(3, 350px);
+    width: 100%;
   }
 }
 
@@ -144,37 +182,72 @@
   }
   
   @include mediaQueriesMin(1200px) {
-    grid-row: 1 / 3;
+//    grid-row: 1 / 3;
     height: 295px;
     width: 315px;
   }
 }
 
 .how-we-works-picture1 {
-  background-color: #424240;
+  background-color: #000;
   margin-right: 90px;
   
-  figcaption {
+  &:hover {
+    background-color: #424240;
+  }
+  
+  &:hover .pic1 {
+    opacity: .3;
+  }
+  
+  &:hover .description {
+    color: #fff;
+    height: 54px;
+    
     @include mediaQueriesMin(480px) {
-      left: 40px;
+      height: 80px;
+    }
+    
+    @include mediaQueriesMin(1200px) {
+      height: 100px;
     }
   }
   
+  &:hover figcaption {
+    bottom: 20px;
+    left: 30px;
+    
+    @include mediaQueriesMin(1200px) {
+      bottom: 15px;
+      left: 50px;
+    }
+  }
+  
+  &:hover .how-we-works-picture-title-middle {
+    margin-bottom: 10px;
+  }
+   
   @include mediaQueriesMin(992px) {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 0px;
   }
   
   @include mediaQueriesMin(1200px) {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  
+  @include mediaQueriesMin(1600px) {
     grid-column: 2 / 3;
-    margin-left: -150px;
+    grid-row: 1 / 3;
+    margin-left: 0;
   }
   
   .description {
-    color: #fff;
-    left: 45px;
+    color: transparent;
+    height: 0;
     margin: 0;
-    bottom: 10%; 
     text-align: left;
+    transition: all .3s ease-in-out;
     width: 70%;
     
     @include mediaQueriesMin(992px) {
@@ -190,17 +263,64 @@
 }
 
 .how-we-works-picture2 {
+  background-color: #000;
   margin-left: 90px;
   transform: skew(25.5deg, 0);
   
+  &:hover {
+    background-color: #424240;
+  }
+  
+  &:hover .pic2 {
+    opacity: .3;
+  }
+
+  &:hover .description {
+    color: #fff;
+    height: 54px;
+
+    @include mediaQueriesMin(480px) {
+      height: 80px;
+    }
+
+    @include mediaQueriesMin(1200px) {
+      height: 100px;
+    }
+  }
+
+  &:hover figcaption {
+    bottom: 20px;
+    left: 30px;
+
+    @include mediaQueriesMin(1200px) {
+      bottom: 15px;
+      left: 50px;
+    }
+  }
+  
+  &:hover .how-we-works-picture-title-bottom {
+    margin-bottom: 10px;
+    text-align: center;
+    
+    @include mediaQueriesMin(992px) {
+      text-align: left;
+    }
+  }
+  
   @include mediaQueriesMin(992px) {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 0px;
     transform: skew(-25.5deg, 0);
   }
   
   @include mediaQueriesMin(1200px) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+  
+  @include mediaQueriesMin(1600px) {
     grid-column: 3 / 4;
-    margin-left: -150px;
+    grid-row: 1 / 3;
+    margin-left: 0;
   }
   
   .pic2 {
@@ -220,7 +340,7 @@
       transform: skew(25.5deg, 0);
     }
     
-    @include mediaQueriesMin(992px) {
+    @include mediaQueriesMin(1200px) {
       text-align: right;
     }
   }
@@ -241,11 +361,86 @@
       }
     }
   }
+  
+  .description {
+    color: transparent;
+    height: 0;
+    margin: 0;
+    text-align: right;
+    transition: all .3s ease-in-out;
+    width: 70%;
+
+    @include mediaQueriesMin(992px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-align: left;
+    }
+
+    @include mediaQueriesMin(1200px) {
+      font-size: 1.8em;
+      line-height: 3rem;
+    }
+  }
 }
 
 .how-we-works-picture3 {
+  background-color: #000;
   grid-column: 1 / -1;
   margin-left: -90px;
+  
+  &:hover {
+    background-color: #424240;
+  }
+  
+  &:hover .pic3 {
+    opacity: .3;
+  }
+
+  &:hover .description {
+    color: #fff;
+    height: 54px;
+
+    @include mediaQueriesMin(480px) {
+      height: 80px;
+    }
+
+    @include mediaQueriesMin(1200px) {
+      height: 100px;
+    }
+  }
+
+  &:hover figcaption {
+    bottom: 20px;
+    left: 30px;
+
+    @include mediaQueriesMin(1200px) {
+      bottom: 15px;
+      left: 50px;
+    }
+  }
+  
+  &:hover .how-we-works-picture-title-bottom {
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: transparent;
+    height: 0;
+    margin: 0;
+    text-align: left;
+    transition: all .3s ease-in-out;
+    width: 70%;
+
+    @include mediaQueriesMin(992px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+
+    @include mediaQueriesMin(1200px) {
+      font-size: 1.8em;
+      line-height: 3rem;
+    }
+  }
   
   @include mediaQueriesMin(992px) {
     grid-column: 4 / 5;
@@ -253,14 +448,20 @@
   }
   
   @include mediaQueriesMin(1200px) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+  
+  @include mediaQueriesMin(1600px) {
     grid-column: 4 / 5;
-    margin-left: -150px;
+    grid-row: 1 / 3;
+    margin-left: 0;
   }
 }
 
+.how-we-works-picture1,
 .how-we-works-picture2,
 .how-we-works-picture3 {
-  background-color: #000;
   
   figcaption {
     bottom: 10px;
@@ -279,7 +480,6 @@
 
 .pic1 {
   left: -105px;
-  opacity: .3;
   top: -20px;
   width: 450px;
   
@@ -291,14 +491,12 @@
 
 .pic2 {
   left: -72px;
-  opacity: .6;
   top: -20px;
   width: 450px;
 }
 
 .pic3 {
   left: -128px;
-  opacity: .6;
   top: -5px;
   width: 450px;
   
@@ -315,6 +513,8 @@
   right: 20px;
   top: 5px;
   transform: skew(25.5deg, 0);
+  transition: all .5s ease-in-out;
+
   
   @include mediaQueriesMin(1200px) {
     font-size: 5.8rem;
@@ -336,19 +536,23 @@
 }
 
 .how-we-works-picture-title-middle {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .how-we-works-triangle {
   @include mediaQueriesMin(1200px) {
     background-color: $red;
     height: 840px;
-    left: 78%;
+    left: 1180px;
     position: absolute;
     right: auto;
     top: -50px;
     transform: rotate(45deg);
     width: 840px;
     z-index: -1;
+  }
+  
+  @include mediaQueriesMin(1600px) {
+    left: 78%;
   }
 }
