@@ -1,4 +1,5 @@
-let Carousel = (function () {
+let Carousel = (_=> {
+  let s = {};
   let tab = ["hide", "left-top", "center", "right-bottom", "hide"];
   let j = 0, k = 4;
   let newTab = [];
@@ -16,7 +17,6 @@ let Carousel = (function () {
     tab = newTab;
     newTab = [];
     k = 4;
-
   }
   
   function slideDownRight() {
@@ -46,4 +46,4 @@ let Carousel = (function () {
   return {
     init
   };
-}());
+})();

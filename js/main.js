@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', _=> {
   Menu.init({
     hamburgerMenu: document.querySelector('.hamburger-menu'),
     hamburgerBarTop: document.querySelector('.hamburger-menu > span'),

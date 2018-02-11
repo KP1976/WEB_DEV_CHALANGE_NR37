@@ -1,20 +1,14 @@
-/* "browser" : true */
-/* jshint browser : true */
-/* global console */
-/* jshint esversion: 6 */
-
-let Menu = (function () {
-  'use strict';
+let Menu = (_=> {
   let s = {};
-
+  
   function popMenu() {
     s.navList.classList.toggle("mobile");    
     s.hamburgerBarTop.classList.toggle("rotateAndMove");
     s.hamburgerBarMiddle.classList.toggle("rotate");
     s.hamburgerBarBottom.classList.toggle("none");
-
+    
     if(s.navList.className === "menu-list-wrapper mobile") {
-      s.menuListAnchor.forEach(function(index) {
+      s.menuListAnchor.forEach((index) => {
         index.addEventListener('click', popDown);
       });
     }
@@ -30,10 +24,10 @@ let Menu = (function () {
   // Funkcja inicjalizująca //
   function init(config) {
     s = config;
-    s.hamburgerMenu.addEventListener('click', popMenu);
+    config.hamburgerMenu.addEventListener('click', popMenu);
   }
 
   return {
-    init: init
+    init
   };
-}());
+})();

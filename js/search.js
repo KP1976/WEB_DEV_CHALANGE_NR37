@@ -1,10 +1,4 @@
-/* "browser" : true */
-/* jshint browser : true */
-/* global console */
-/* jshint esversion: 6 */
-
-let Search = (function () {
-  'use strict';
+let Search = (_=> {
   let s = {};
   
   function search() {
@@ -20,6 +14,6 @@ let Search = (function () {
   }
 
   return {
-    init: init
+    init
   };
-}());
+})();
