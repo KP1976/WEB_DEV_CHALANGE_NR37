@@ -28,8 +28,6 @@ let Carousel = (_=> {
       j++;
       s.boxes[i].classList.remove(tab[i]);
       s.boxes[i].classList.add(newTab[i]);
-
-      console.log(s.jobBox[i].classList);
     }
     tab = newTab;
     newTab = [];

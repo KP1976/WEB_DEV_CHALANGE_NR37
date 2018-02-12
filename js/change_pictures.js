@@ -1,7 +1,7 @@
 let Change = (_=> {
   let s = {};
   const tabNameCompany = ["Jimmy Doe, Designer", "John Doe, IT manager", "Jinny Snow, Company CEO"];
-  const cites = ["Morbi interdum blandit velit, sit amet accumsan lorem porta id. Mauris at odio vitae felis maximus placerat. Curabitur elementum lacus et neque tristique, id convallis sem.", "Vestibulum purus massa, tempus eu congue ut, placerat placerat metus. Integer laoreet dolor et massa cursus, sit amet ultrices odio scelerisque. Donec auctor tristique facilisis. Etiam.", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."];
+  const cites = ["Morbi interdum blandit velit, sit amet accumsan lorem porta id. Mauris at odio vitae felis maximus placerat. Curabitur elementum lacus et neque tristique, id convallis sem.", "Vestibulum purus massa, tempus eu congue ut, placerat placerat metus. Integer laoreet dolor et massa cursus, sit amet ultrices odio scelerisque. Donec auctor tristique facilisis. Etiam.", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium laudantium."];
 
   // Funkcja zmieniająca obrazki, cytat, nazwisko i nazwę firmy po kliknięciu na miniaturę obrazka
   function changePicture(e) {

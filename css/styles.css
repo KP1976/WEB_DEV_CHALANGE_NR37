@@ -1916,6 +1916,23 @@ span.none {
   }
 }
 
+img[src="img/team_pic0.jpg"] {
+  left: -32px;
+  top: -18px;
+}
+@media screen and (min-width: 992px) {
+  img[src="img/team_pic0.jpg"] {
+    left: -37px;
+    top: -22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  img[src="img/team_pic0.jpg"] {
+    left: -54px;
+    top: -32px;
+  }
+}
+
 .slider-picture-name-box {
   background-color: #252525;
   height: 20px;
@@ -1932,7 +1949,7 @@ span.none {
 @media screen and (min-width: 1200px) {
   .slider-picture-name-box {
     bottom: -32px;
-    height: 38px;
+    height: 30px;
     left: 20px;
     position: absolute;
     width: 180px;
@@ -1952,7 +1969,7 @@ span.none {
 @media screen and (min-width: 1200px) {
   .slider-picture-name {
     font-size: 1.8rem;
-    line-height: 38px;
+    line-height: 27px;
   }
 }
 
@@ -1960,19 +1977,25 @@ span.none {
   bottom: -11px;
   height: 13px;
   background-color: #bc2e3a;
-  left: 47px;
+  left: 34px;
   padding: 0 10px;
   position: absolute;
   -webkit-transform: skew(45deg);
           transform: skew(45deg);
+  width: 90px;
+}
+@media screen and (min-width: 992px) {
+  .slider-picture-job-box {
+    left: 43px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .slider-picture-job-box {
     bottom: -45px;
     height: 17px;
-    left: 75px;
+    left: 65px;
     padding: 0 15px;
-    width: auto;
+    width: 120px;
   }
 }
 

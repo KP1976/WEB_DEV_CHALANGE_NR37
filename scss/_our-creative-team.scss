@@ -225,6 +225,21 @@
   }
 }
 
+img[src="img/team_pic0.jpg"] {
+  left: -32px;
+    top: -18px;
+
+  @include mediaQueriesMin(992px) {
+    left: -37px;
+    top: -22px;
+  }
+
+  @include mediaQueriesMin(1200px) {
+    left: -54px;
+    top: -32px;
+  }
+}
+
 .slider-picture-name-box {
   background-color: #252525;
   height: 20px;
@@ -238,7 +253,7 @@
   
   @include mediaQueriesMin(1200px) {
     bottom: -32px;
-    height: 38px;
+    height: 30px;
     left: 20px;
     position: absolute;
     width: 180px;
@@ -256,26 +271,30 @@
   
   @include mediaQueriesMin(1200px) {
     font-size: 1.8rem;
-    line-height: 38px;
+    line-height: 27px;
   }
 }
 
 .slider-picture-job-box {
   bottom: -11px;
-  // display: none;
   height: 13px;
   background-color: $red;
-  left: 47px;
+  left: 34px;
   padding: 0 10px;
   position: absolute;
   transform: skew(45deg);
+  width: 90px;
+   
+  @include mediaQueriesMin(992px) {
+    left: 43px;
+  }
   
   @include mediaQueriesMin(1200px) {
     bottom: -45px;
     height: 17px;
-    left: 75px;
+    left: 65px;
     padding: 0 15px;
-    width: auto;
+    width: 120px;
   }
 }
 

@@ -8,7 +8,7 @@ let Menu = (_=> {
     s.hamburgerBarBottom.classList.toggle("none");
     
     if(s.navList.className === "menu-list-wrapper mobile") {
-      s.menuListAnchor.forEach((index) => {
+      s.menuListAnchor.forEach(index => {
         index.addEventListener('click', popDown);
       });
     }
