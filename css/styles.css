@@ -189,8 +189,8 @@ header {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .menu-item-anchor::after {
   border-bottom: 1px solid transparent;
@@ -200,10 +200,10 @@ header {
   position: absolute;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
-  -webkit-transition: -webkit-transform .2s ease-in-out;
-  transition: -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   width: 100%;
 }
 .menu-item-anchor:hover::after {
@@ -283,8 +283,8 @@ header {
   display: block;
   height: 6px;
   margin-bottom: 4px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 30px;
 }
 .hamburger-menu span:last-child {
@@ -318,6 +318,7 @@ span.none {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -569,8 +570,8 @@ span.none {
   left: 0;
   padding-right: 25px;
   position: absolute;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: right;
   text-transform: uppercase;
   width: 93%;
